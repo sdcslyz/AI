@@ -2,7 +2,7 @@
 //
 
 #include "stdafx.h"
-#define pocket
+//#define pocket
 using namespace std;
 double train_data[4001][100];//[ccnt] is the overcome;
 double valid_data[40001][100];
@@ -83,7 +83,7 @@ int main()
 	int cort_max = 0;
 #endif // pocket
 
-	int n = 40;
+	int n = 100;
 	for (int i = 0; i < n; i++)
 	{
 		for (int k = 0; k < rcnt; k++)
@@ -95,7 +95,7 @@ int main()
 				{
 					w[j] = w[j] + result[k] * train_data[k][j];
 				}
-
+				break;
 #ifdef pocket
 				double cort = 0;
 				for (int j = 0; j < rcnt; j++)
